@@ -1,0 +1,58 @@
+#content-container {
+    padding-top: 2em;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.centered-vertically {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.nav-link {
+    font-size: 1.25rem;
+}
+
+.nav-item {
+    margin: 0 .25rem;
+}
+
+p {
+    text-align: justify;
+}
+
+p + p {
+    text-indent: 2rem;
+}
+
+#logged-user {
+    color: white;
+    margin-right: 1rem;
+}
+
+.fas, .fab {
+    margin-right: .5rem;
+}
+
+.center-column {
+    text-align: center;
+}
+
+.login-container {
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+p.experience {
+    margin-bottom: 0;
+}

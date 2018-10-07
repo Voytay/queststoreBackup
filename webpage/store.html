@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="UTF-8">
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/stylesheets/styles.css">
+    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+		<!-- Scripts -->
+		<script defer src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+		<script src="assets/scripts/openModals.js"></script>
+		<script src="assets/scripts/handleForms.js"></script>
+
+    	<title>Store // QuestStore</title>
+	</head>
+	<body>
+		<div class="container-fluid bg-dark sticky-top">
+			<header class="container">
+				<nav class="navbar navbar-expand-lg navbar-dark">
+					<div class="collapse navbar-collapse">
+						<!-- Logo -->
+						<a class="navbar-brand centered-vertically" href="http://codecool.pl">
+							<img class="logo" src="assets/images/codecool.png" alt="Codecool logo" />
+						</a>
+						<a class="navbar-brand centered-vertically" href="index.html">
+							<h2 style="display: inline-block; margin-bottom: 0; color: white;">QuestStore</h2>
+						</a>
+
+						<!-- Menu -->
+						<ul class="nav navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="admin_dashboard.html"><i class="fas fa-columns"></i>Dashboard</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="store.html"><i class="fas fa-shopping-cart"></i>Store</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="profile.html"><i class="fas fa-user"></i>Profile</a>
+							</li>
+						</ul>
+
+						<!-- Login -->
+						<section class="nav-item ml-auto centered-vertically" id="login">
+							<!-- <span id="logged-user">Hello, User</span> -->
+							<a href="login.html">
+								<button class="btn btn-secondary"><i class="fas fa-sign-in-alt"></i>Sign in</button>
+							</a>
+						</section>
+					</div>
+				</nav>
+			</header>
+		</div>
+
+    <div id="content-container" class="container">
+			<header>
+				<h1>Store</h1>
+				<p class="lead">You can spend your hard earned coolcoins on artifacts from here</p>
+			</header>
+			
+			<div id="cards-container" class="row">
+				<script src="assets/scripts/addArtifactsCards.js"></script>
+			</div>
+				
+		</div> <!-- End of the main cointainer-->
+
+		<!-- Common modal -->
+		<div class="modal" tabindex="-1" role="dialog" id="common-modal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<!-- Here goes modal-content -->
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

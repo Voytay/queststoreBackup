@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="assets/stylesheets/styles.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+		<!-- Scripts -->
+		<script defer src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+		<script src="assets/scripts/openModals.js"></script>
+		<script src="assets/scripts/handleForms.js"></script>
+		
+    <title>Dashboard // QuestStore</title>
+	</head>
+	<body>
+
+		<div class="container-fluid bg-dark sticky-top">
+			<header class="container">
+				<nav class="navbar navbar-expand-lg navbar-dark">
+					<div class="collapse navbar-collapse">
+						<!-- Logo -->
+						<a class="navbar-brand centered-vertically" href="http://codecool.pl">
+							<img class="logo" src="assets/images/codecool.png" alt="Codecool logo" />
+						</a>
+						<a class="navbar-brand centered-vertically" href="index.html">
+							<h2 style="display: inline-block; margin-bottom: 0; color: white;">QuestStore</h2>
+						</a>
+
+						<!-- Menu -->
+						<ul class="nav navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="admin_dashboard.html"><i class="fas fa-columns"></i>Dashboard</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="store.html"><i class="fas fa-shopping-cart"></i>Store</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="profile.html"><i class="fas fa-user"></i>Profile</a>
+							</li>
+						</ul>
+
+						<!-- Login -->
+						<section class="nav-item ml-auto centered-vertically" id="login">
+							<a href="login.html">
+								<button class="btn btn-secondary"><i class="fas fa-sign-in-alt"></i>Sign in</button>
+							</a>
+						</section>
+					</div>
+				</nav>
+			</header>
+		</div>
+
+
+		<div class="container" id="content-container">
+			<header>
+				<h1>Admin dashboard</h1>
+				<p class="lead">You can manage mentors, classes and levels from here</p>
+			</header>
+
+
+			<div id="accordion">
+				<div class="card">
+					<div class="card-header" id="headingOne">
+						<h5 class="mb-0">
+							<section data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								Mentors
+							</section>
+						</h5>
+					</div>
+
+					<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+						<div class="card-body">
+							<button class="btn btn-dark" type="button" id="open-add-mentor-modal" onclick="openAddModal(this.id)">
+								<i class="fas fa-plus-circle"></i>Add mentor
+							</button>
+
+							<div id="mentors-table">
+								<script src="assets/scripts/addMentorsTable.js"></script>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="card">
+					<div class="card-header" id="headingTwo">
+						<h5 class="mb-0">
+							<section data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								Manage classes
+							</section>
+						</h5>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+						<div class="card-body">
+							<button class="btn btn-dark" id="open-add-class-modal" type="button" role="dialog" onclick="openAddModal(this.id)">
+								<i class="fas fa-plus-circle"></i>Add class
+							</button>
+
+							<div id="classes-table">
+								<script src="assets/scripts/addClassesTable.js"></script>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-header" id="headingThree">
+						<h5 class="mb-0">
+							<section data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							Manage levels
+						</section>
+					</h5>
+				</div>
+				<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+					<div class="card-body">
+						<button class="btn btn-dark" id="open-add-level-modal" type="button" role="dialog" onclick="openAddModal(this.id)">
+							<i class="fas fa-plus-circle"></i>Add level
+						</button>
+
+						<div id="levels-table">
+							<script src="assets/scripts/addLevelsTable.js"></script>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div> <!-- End of the main cointainer-->
+
+		<!-- Common modal -->
+		<div class="modal" tabindex="-1" role="dialog" id="common-modal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<!-- Here goes modal-content -->
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
